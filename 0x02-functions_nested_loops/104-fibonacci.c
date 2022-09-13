@@ -1,8 +1,3 @@
-/*
- * File: 104-fibonnaci.c
- * Auth: Brennan D Barban
- */
-
 #include <stdio.h>
 
 /**
