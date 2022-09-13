@@ -1,20 +1,17 @@
 #include "main.h"
-
 /**
- * main - Print "_putchar"
- *
- * Return: Always 0 (Success)
+ * main - prints _putchar, fllowd by a new linees
+ * Return: Alwys 0 (Success)
  */
-
 int main(void)
 {
-	int i = 0;
-	char name_of_school[] = "_putchar";
+	char abe[] = "_putchar";
 
-	while (i < 10)
+	int c;
+
+	for (c = 0; c < 8; c++)
 	{
-		_putchar(name_of_school[i]);
-		i++;
+		_putchar(abe[c]);
 	}
 	_putchar('\n');
 	return (0);
