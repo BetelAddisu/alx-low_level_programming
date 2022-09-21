@@ -5,24 +5,27 @@
  * @s: An input string to encode using rot13
  * Return: An encode string
  */
-char *rot13(char *s)
+char *rot13(char *str)
 {
-	int i;
+	int i, j;
 
-	char rot13[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char ROT13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-	char *ptr = s;
+	char alpha[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	while (*s)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		for (i = 0; i <= 52; i++)
+		j = 0;
+		while (alpha[j] != '\0')
 		{
-			if (*s == rot13[i])
+			if (str[i] == alpha[j])
 			{
-				*s = ROT13[i];
+				str[i] = rot[j];
 				break;
 			}
+			j++;
 		}
-		s++;
+		i++;
 	}
-	return (ptr)
+	return (str);
+}
