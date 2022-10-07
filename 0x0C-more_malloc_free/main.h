@@ -10,7 +10,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 int _putchar(char c);
 int _atoi(const char *s);
 void print_int(unsigned long int n);
-void simple_print_buffer(int *buffer, unsigned int size)
 
 
 #endif
